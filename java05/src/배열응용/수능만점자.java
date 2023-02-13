@@ -46,18 +46,6 @@ public class 수능만점자 {
 		}
 		System.out.println("평균보다 +-50점인 학생 수: " + count3);
 		
-		//점수 상위 30%?
-		int top = 0;
-		for (int i = 0; i < jumsu.length; i++) {
-			for (int j = i + 1; j < jumsu.length; j++) {
-				if (jumsu[i] < jumsu[j]) {
-					top = jumsu[i];
-					jumsu[i] = jumsu[j];
-					jumsu[j] = top;
-				}
-			}
-		}
-		System.out.println(jumsu[2999]);
 		
 	}
 
