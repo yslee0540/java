@@ -1,4 +1,4 @@
-package 배열;
+package 문자열;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -21,6 +21,7 @@ public class 정리문제 {
 			}
 		}
 		System.out.println("최소값: " + min);
+		sc.close();
 		
 		//2
 		Random r = new Random(5);
@@ -56,20 +57,23 @@ public class 정리문제 {
 		}
 		
 		//6
-		String s5 = "[10, 20, 50, 40, 30]";
-		String s51 = s5.replace("[", "");
-		String s52 = s51.replace("]", "");
-		String[] s53 = s52.split(", ");
+		String s5 = "[ 10, 20, 50, 40, 30]";
+		s5 = s5.replace("[", "");
+		s5 = s5.replace("]", "").trim();
+		String[] s51 = s5.split(", ");
 		
 		int sum = 0;
-		int[] n = new int[5];
-		for (int i = 0; i < s53.length; i++) {
-			n[i] = Integer.parseInt(s53[i]);
-			sum = sum + n[i];
+		for (String x : s51) {
+			int x2 = Integer.parseInt(x);
+			sum = sum + x2;
 		}
 		System.out.println("합계: " + sum);
 		
 		//7
+		int[] n = new int[s51.length];
+		for (int i = 0; i < n.length; i++) {
+			n[i] = Integer.parseInt(s51[i]);
+		}
 		Arrays.sort(n);
 		System.out.println(Arrays.toString(n));
 
